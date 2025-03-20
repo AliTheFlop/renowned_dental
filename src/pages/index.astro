@@ -1,22 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import OurServices from "../components/OurServices.astro";
 const pageTitle = "Renowned Dental Clinic";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <Header />
-    <section class="base-section">
-        <div class="hero-content">
-            <div class="hero-headings">
-                <h1 class="hero-heading">The Better Dental<br />Experience</h1>
-                <p class="hero-subheading">
-                    Because You Deserve Better Than Average
-                </p>
-            </div>
-            <div class="hero-button">
-                <button>Request Appointment</button>
-            </div>
-        </div>
-    </section>
+    <Hero />
+    <OurServices />
 </BaseLayout>

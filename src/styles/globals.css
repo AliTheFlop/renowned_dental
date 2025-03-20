@@ -1,8 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&family=Mohave:ital,wght@0,300..700;1,300..700&display=swap");
 
 :root {
     --primary-blue: #3fbaef;
     --accent-blue: #052645;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body,
@@ -15,8 +20,14 @@ html {
 }
 
 .base-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section {
     width: 100vw;
-    height: 80vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     background: url("/hero_bg.png");
@@ -34,6 +45,10 @@ html {
     align-items: start;
 }
 
+.hero-headings {
+    max-width: 50%;
+}
+
 .hero-heading {
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
@@ -44,18 +59,18 @@ html {
 }
 
 .hero-subheading {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 50px;
 }
 
 .hero-button button {
-    background: linear-gradient(#1b96ca, var(--primary-blue));
+    background: linear-gradient(#21aae5, var(--primary-blue));
     border: none;
     padding: 15px 30px;
     color: white;
     cursor: pointer;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* NAV */
@@ -67,6 +82,9 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .nav-container {
@@ -122,4 +140,34 @@ html {
     height: 20px;
     margin: 0;
     padding: 0;
+}
+
+/* SERVICES */
+
+.services-content {
+    max-width: 1400px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 60px 0;
+}
+
+.services-headings {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-headings h4 {
+    font-family: "Mohave", sans-serif;
+    font-size: 14px;
+    color: var(--primary-blue);
+}
+
+.services-content h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent-blue);
+    margin-top: 7px;
 }
