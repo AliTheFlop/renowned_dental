@@ -1,16 +1,22 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+const pageTitle = "Renowned Dental Clinic";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+    <Header />
+    <section class="base-section">
+        <div class="hero-content">
+            <div class="hero-headings">
+                <h1 class="hero-heading">The Better Dental<br />Experience</h1>
+                <p class="hero-subheading">
+                    Because You Deserve Better Than Average
+                </p>
+            </div>
+            <div class="hero-button">
+                <button>Request Appointment</button>
+            </div>
+        </div>
+    </section>
+</BaseLayout>

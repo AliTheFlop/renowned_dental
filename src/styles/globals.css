@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&display=swap");
+
+:root {
+    --primary-blue: #3fbaef;
+    --accent-blue: #052645;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.base-section {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    background: url("/hero_bg.png");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.hero-content {
+    max-width: 1400px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.hero-heading {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 64px;
+    margin-bottom: 20px;
+    color: var(--accent-blue);
+}
+
+.hero-subheading {
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.hero-button button {
+    background: linear-gradient(#1b96ca, var(--primary-blue));
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* NAV */
+
+.nav {
+    width: 100%;
+    background-color: var(--primary-blue);
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    fill: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-cta {
+    background-color: white;
+    border-radius: 500px;
+    color: black;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-cta h3 {
+    font-weight: 800;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-left: 6px;
+}
+
+.nav-cta img {
+    transform: rotate(90deg);
+    height: 24px;
+    margin: 0;
+    padding: 0;
+}
