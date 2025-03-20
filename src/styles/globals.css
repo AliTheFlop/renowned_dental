@@ -85,12 +85,19 @@ html {
 .nav-links {
     display: flex;
     gap: 40px;
+    height: 100%;
+    align-items: center;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 600;
+    transition: all 0.1s ease;
+}
+
+.nav-links a:hover {
+    transform: translateY(-2px);
 }
 
 .nav-cta {
@@ -104,7 +111,7 @@ html {
 
 .nav-cta h3 {
     font-weight: 800;
-    font-size: 18px;
+    font-size: 16px;
     padding: 0;
     margin: 0;
     margin-left: 6px;
@@ -112,7 +119,7 @@ html {
 
 .nav-cta img {
     transform: rotate(90deg);
-    height: 24px;
+    height: 20px;
     margin: 0;
     padding: 0;
 }
