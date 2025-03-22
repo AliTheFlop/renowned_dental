@@ -24,6 +24,18 @@ const services = [
             "Yellow teeth? Ugh! Fix it with the most stunning treatments that deliver real results in just one visit.",
         imageSrc: "/whitening.jpg",
     },
+    {
+        name: "Smile Enhancements",
+        description:
+            "Tired of wonky, unequal teeth? We take care of all your braces, and even offer financing for expensive operations.",
+        imageSrc: "/smile_enhancements.jpg",
+    },
+    {
+        name: "Teeth Whitening",
+        description:
+            "Yellow teeth? Ugh! Fix it with the most stunning treatments that deliver real results in just one visit.",
+        imageSrc: "/whitening.jpg",
+    },
 ];
 ---
 
@@ -34,21 +46,27 @@ const services = [
             <h2>Exceptional Dental Care</h2>
         </div>
         <div class="services-grid">
-            <div class="services-service">
-                <img src="/whitening.jpg" alt="Teeth Whitening" />
-                <div>
-                    <!-- TODO: Make all the services 1 by 1 automatic (and style it ofc) -->
-                    <h3>Teeth Whitening</h3>
-                    <p>
-                        Yellow teeth? Ugh! Fix it with the most stunning
-                        treatments that deliver real results in just one visit.
-                    </p>
-                    <img
-                        src="/icons/arrow_right.svg"
-                        alt="Arrow Pointing To The Right"
-                    />
-                </div>
-            </div>
+            {
+                services.map((service) => (
+                    <div class="services-service">
+                        <img src={service.imageSrc} alt="Teeth Whitening" />
+                        <div class="services-text-container">
+                            <h3>{service.name}</h3>
+                            <p>{service.description}</p>
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"
+                            >
+                                <path
+                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                                    fill="#3fbaef"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                ))
+            }
         </div>
     </div>
 </section>
