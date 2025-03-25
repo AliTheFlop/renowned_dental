@@ -1,0 +1,42 @@
+---
+
+---
+
+<div class="mobile-nav">
+    <div class="mobile-nav-open-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="mobile-nav-links">
+        <div class="mobile-nav-container">
+            <div class="mobile-nav-close-icon">
+                <span></span>
+            </div>
+            <ul id="mobile-nav-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Patients</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerIcon = document.querySelector(".mobile-nav-open-icon");
+        const menuList = document.querySelector(".mobile-nav-links");
+        const closeMenuIcon = document.querySelector(".mobile-nav-close-icon");
+
+        hamburgerIcon?.addEventListener("click", function () {
+            menuList?.classList.toggle("active");
+        });
+
+        closeMenuIcon?.addEventListener("click", function () {
+            menuList?.classList.toggle("active");
+        });
+    });
+</script>

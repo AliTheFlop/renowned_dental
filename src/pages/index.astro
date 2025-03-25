@@ -1,12 +1,14 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import OurServices from '../components/OurServices.astro';
-const pageTitle = 'Renowned Dental Clinic';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import MobileHeader from "../components/MobileHeader.astro";
+import Hero from "../components/Hero.astro";
+import OurServices from "../components/OurServices.astro";
+const pageTitle = "Renowned Dental Clinic";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+    <MobileHeader />
     <Header />
     <Hero />
     <OurServices />
