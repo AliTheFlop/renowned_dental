@@ -1,5 +1,6 @@
 ---
 const services = [
+    // Generally need better images (or crop them to square 1:1)
     {
         name: "General Checkups",
         description:
@@ -24,18 +25,6 @@ const services = [
             "Yellow teeth? Ugh! Fix it with the most stunning treatments that deliver real results in just one visit.",
         imageSrc: "/whitening.jpg",
     },
-    {
-        name: "Smile Enhancements",
-        description:
-            "Tired of wonky, unequal teeth? We take care of all your braces, and even offer financing for expensive operations.",
-        imageSrc: "/smile_enhancements.jpg",
-    },
-    {
-        name: "Teeth Whitening",
-        description:
-            "Yellow teeth? Ugh! Fix it with the most stunning treatments that deliver real results in just one visit.",
-        imageSrc: "/whitening.jpg",
-    },
 ];
 ---
 
@@ -49,7 +38,10 @@ const services = [
             {
                 services.map((service) => (
                     <div class="services-service">
-                        <img src={service.imageSrc} alt="Teeth Whitening" />
+                        <div class="services-image-container">
+                            <img src={service.imageSrc} alt="Teeth Whitening" />
+                        </div>
+
                         <div class="services-text-container">
                             <h3>{service.name}</h3>
                             <p>{service.description}</p>
