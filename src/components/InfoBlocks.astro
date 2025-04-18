@@ -1,0 +1,105 @@
+---
+
+---
+
+<section class="base-section">
+    <div class="infoblock-section">
+        <div class="infoblock-bg-layer">
+            <div class="infoblock-grid">
+                <div class="infoblock-text">
+                    <div class="infoblock-text-headings">
+                        <h4>PRICING</h4>
+                        <h2>Prices To Match Any Budget</h2>
+                    </div>
+                    <p>
+                        Dental care shouldn't be a luxury - whether you're
+                        looking for basic preventative care, or a complete smile
+                        renovation, our pricing structure means there are no
+                        unnecessary surprises.<br />We offer tailored payment
+                        solutions that fit any financial situation, because
+                        everyone deserves quality dental care, regardless of
+                        budget constraints.<br />Need to discuss financial
+                        options before committing? Our friendly finance team is
+                        just a call away, ready to find the perfect solution for
+                        your wallet and your wellbeing.
+                    </p>
+                </div>
+
+                <img
+                    src="infoblock-pricing.jpg"
+                    alt="Plastic Teeth Diagram"
+                    id="infoblock-image"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style is:global>
+    .infoblock-section {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .infoblock-bg-layer {
+        max-width: 80%;
+        z-index: 0;
+    }
+
+    .infoblock-bg-layer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        /* background-color: var(--primary-blue); */
+        border: 4px solid var(--primary-blue);
+        border-radius: 0 50px 50px 0;
+        z-index: 0;
+    }
+
+    .infoblock-grid {
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 40px;
+        grid-row-gap: 0px;
+        z-index: 30;
+    }
+
+    #infoblock-image {
+        border-radius: 4px;
+        width: 100%;
+        height: 80%;
+        align-self: center;
+    }
+    /* h4 -> h2 -> p */
+    .infoblock-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        color: black;
+        width: 95%;
+    }
+
+    .infoblock-text-headings {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        color: var(--accent-blue);
+    }
+
+    .infoblock-text-headings h2 {
+        font-weight: 900;
+    }
+
+    .infoblock-text-headings h4 {
+        font-weight: 900;
+        font-size: 14px;
+        font-family: 'Mohave', sans-serif;
+    }
+</style>

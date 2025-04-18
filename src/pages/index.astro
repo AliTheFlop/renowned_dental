@@ -1,11 +1,12 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/Header.astro";
-import MobileHeader from "../components/MobileHeader.astro";
-import Hero from "../components/Hero.astro";
-import OurServices from "../components/OurServices.astro";
-import Testimonials from "../components/Testimonials.astro";
-const pageTitle = "Renowned Dental Clinic";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import MobileHeader from '../components/MobileHeader.astro';
+import Hero from '../components/Hero.astro';
+import OurServices from '../components/OurServices.astro';
+import Testimonials from '../components/Testimonials.astro';
+import InfoBlocks from '../components/InfoBlocks.astro';
+const pageTitle = 'Renowned Dental Clinic';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -13,5 +14,6 @@ const pageTitle = "Renowned Dental Clinic";
     <Header />
     <Hero />
     <OurServices />
+    <InfoBlocks />
     <Testimonials />
 </BaseLayout>
