@@ -1,0 +1,175 @@
+---
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// Your testimonial data could go here
+const testimonials = [
+    {
+        text: "Absolutely amazing dental service! I love the speed and efficiency, modes of sedation, and dental systems. Dr. Anderson makes every visit comfortable and anxiety-free.",
+        author: "John Smith",
+        role: "Software Engineer",
+    },
+    {
+        text: "After years of dental anxiety, I finally found a practice that understands my fears. Their sedation options completely changed my experience, making dental visits something I no longer dread.",
+        author: "Sarah Johnson",
+        role: "Elementary School Teacher",
+    },
+    {
+        text: "The technology at this practice is remarkable! Digital scanning instead of those uncomfortable molds made a huge difference, and I was amazed at how quickly my crown was completed.",
+        author: "Michael Chen",
+        role: "Marketing Executive",
+    },
+    {
+        text: "As someone with sensitive teeth, I've always struggled with dental work. The gentle techniques and sedation options here have been life-changing. For the first time, I had a pain-free dental experience.",
+        author: "Priya Patel",
+        role: "Restaurant Owner",
+    },
+    {
+        text: "I brought my entire family here after my first visit. The staff is incredible with children and made my 5-year-old actually excited about going to the dentist! Their ability to handle patients of all ages is impressive.",
+        author: "Robert Jefferson",
+        role: "Construction Manager",
+    },
+];
+---
+
+<!--Normal section -->
+<section class="base-section section-gray">
+    <!--outside container -->
+    <div class="testimonials-container">
+        <h2 class="testimonials-header">
+            Take Their Word For It, <span>Not Ours</span>
+        </h2>
+
+        <!-- Swiper container -->
+        <div class="swiper testimonials-swiper">
+            <div class="swiper-wrapper no-select">
+                {
+                    testimonials.map((testimonial) => (
+                        <div class="swiper-slide">
+                            <div class="testimonial-content">
+                                <p>"{testimonial.text}"</p>
+                                <div class="testimonial-author">
+                                    <strong>{testimonial.author}</strong>
+                                    <span>{testimonial.role}</span>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+
+            <!-- Add navigation arrows -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- Add pagination dots -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .full-height {
+        min-height: 50vh;
+    }
+
+    .section-gray {
+        background-color: #f6f6f6;
+    }
+
+    .testimonials-container {
+        max-width: 1200px;
+        padding: 4rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonials-header {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--accent-blue);
+        margin-top: 7px;
+        text-align: center;
+    }
+
+    .testimonials-header span {
+        color: var(--primary-blue);
+    }
+
+    .testimonials-swiper {
+        width: 100%;
+        height: 300px;
+    }
+
+    .testimonial-content {
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testimonial-content p {
+        font-size: 24px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-style: italic;
+        text-align: center;
+        max-width: 80%;
+    }
+
+    .testimonial-author {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    :global(.swiper-button-next),
+    :global(.swiper-button-prev) {
+        color: #4a6cf7;
+        font-size: 16px;
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+        background-color: var(--primary-blue);
+    }
+</style>
+
+<script>
+    // This script runs in the browser after the component mounts
+    import Swiper from "swiper";
+    import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+    // Wait for the DOM to be fully loaded
+    document.addEventListener("DOMContentLoaded", () => {
+        const swiper = new Swiper(".testimonials-swiper", {
+            // Configure Swiper to use modules
+            modules: [Navigation, Pagination, Autoplay],
+
+            // Optional parameters
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            // Pagination
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    });
+</script>

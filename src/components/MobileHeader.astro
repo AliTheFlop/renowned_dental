@@ -40,3 +40,109 @@
         });
     });
 </script>
+
+<style is:global>
+    /* Mobile */
+
+    .mobile-nav {
+        width: 100%;
+        background-color: var(--primary-blue);
+        position: fixed;
+        display: none;
+        justify-content: end;
+        z-index: 300;
+    }
+
+    .mobile-nav-container {
+        width: 80%;
+        padding: 0px 20px;
+    }
+
+    .mobile-nav-open-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        padding: 10px 10px;
+        margin: 10px;
+        border-radius: 4px;
+        background-color: white;
+    }
+
+    .mobile-nav-close-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: end;
+        padding: 10px 0px;
+    }
+
+    .mobile-nav-open-icon span {
+        background-color: var(--accent-blue);
+        display: block;
+        height: 2px;
+        margin: 2px 0;
+        transition: all 0.3s;
+        width: 20px;
+    }
+
+    .mobile-nav-close-icon span {
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        padding: 10px 10px;
+        border-radius: 4px;
+    }
+
+    .mobile-nav-close-icon span::after {
+        content: "\d7";
+        font-size: 36px;
+        color: var(--accent-blue);
+        font-weight: bold;
+    }
+
+    .mobile-nav-links {
+        position: fixed;
+        left: -1200px;
+        width: 100%;
+        max-width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .mobile-nav-links.active {
+        left: 0px;
+        top: 0px;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        background-color: var(--primary-blue);
+    }
+
+    #mobile-nav-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    #mobile-nav-list li {
+        margin-top: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px dotted var(--accent-blue);
+    }
+
+    #mobile-nav-list li a {
+        font-size: 24px;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+    }
+
+    @media screen and (max-width: 768px) {
+        .mobile-nav {
+            display: flex;
+        }
+    }
+</style>

@@ -21,3 +21,100 @@
         </div>
     </div>
 </div>
+
+<style is:global>
+    /* NAV */
+
+    /* Desktop */
+    .nav {
+        width: 100%;
+        background-color: var(--primary-blue);
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        animation: fadeInDown 1s linear 0s 1 normal forwards;
+    }
+
+    @media screen and (min-height: 1025px) {
+        .nav {
+            visibility: visible;
+        }
+    }
+
+    .nav-container {
+        width: 100%;
+        max-width: 80%;
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-logo img {
+        fill: white;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 40px;
+        height: 100%;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.1s ease;
+    }
+
+    .nav-links a:hover {
+        transform: translateY(-2px);
+    }
+
+    .nav-cta {
+        background-color: white;
+        border-radius: 500px;
+        color: black;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-cta h3 {
+        font-weight: 800;
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+        margin-left: 6px;
+    }
+
+    .nav-cta img {
+        transform: rotate(90deg);
+        height: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .nav-cta {
+            display: none;
+        }
+
+        .nav-container {
+            max-width: 100%;
+            margin: 0px 20px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .nav {
+            display: none;
+        }
+    }
+</style>
